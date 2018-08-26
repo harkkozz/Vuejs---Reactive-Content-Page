@@ -29,7 +29,7 @@
 </template>
 
 <script>
-export default {
+  export default {
   data() {
     return {
       name: '',
@@ -40,7 +40,7 @@ export default {
       },
       x: 0,
       color: '',
-      errorMessage: 'You have to input 4 characters'
+      errorMessage: 'You have to input at least 4 characters'
     }
   },
   methods: {
@@ -95,102 +95,5 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-$bgColor: #bdbdbd
-$hotBtnColor: #ff6666
-$coldBtnColor: #6666ff
-$resp-width: 760px
-
-.content-main
-  position: fixed
-  width: 100%
-  height: 100%
-  left: 0
-  top: 0
-  padding: 2%
-  background: $bgColor
-  z-index: 1
-
-@media screen and (max-width: $resp-width) 
-  .buttons 
-    resize: both
-
-@media screen and (max-width: $resp-width) 
-  .content-main 
-    font-size: 30px
-    padding: 0
-
-@media screen and (max-width: $resp-width)
-  .error-msg
-    font-size: 10px
-
-.hot-button
-  background-color: $hotBtnColor
-  color: white
-  font-size: 25px
-  font-weight: bold
-  padding-top: 65px
-  width: 10%
-  height: 170px
-  border: 2px solid red
-  outline: 0
-
-@media screen and (max-width:760px) 
-  .hot-button 
-    font-size: 15px
-    height: 100px
-
-.cold-button 
-  background-color: $coldBtnColor
-  color: white
-  font-size: 25px
-  font-weight: bold
-  padding-top: 65px
-  width: 10%
-  height: 170px
-  border: 2px solid blue
-  outline: 0
-
-@media screen and (max-width:760px) 
-  .cold-button 
-    font-size: 15px
-    height: 100px
-
-.effect-enter-active, .effect-leave-active 
-  transition: opacity 0.5s
-.effect-enter, .effect-leave-to .effect-leave-active 
-  opacity: 0
-
-.errormsg-enter-active, .errormsg-leave-active
-  transition: opacity 0.5s
-.errormsg-enter, .errormsg-leave-to .errormsg-leave-active 
-  opacity: 0
-
-.welcome-text 
-  font-size: 30px
-  color: white
-
-.name-text 
-  font-size: 40px
-  color: white
-
-.error-msg
-  font-size: 20px
-  color: #990000
-  text-decoration: underline
-
-.temperature-text 
-  font-size: 25px
-  margin-top: 40px
-  color: white
-
-#input-name
-  outline: none
-  color: white
-  background:  $bgColor
-  border-style: none
-  font-size: 40px
-
-::placeholder
-  font-size: 20px
-  color: white
+  @import '../assets/scss/homepage.sass'
 </style>
